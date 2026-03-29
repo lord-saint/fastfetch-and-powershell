@@ -1,0 +1,32 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  // To change logo color, run this ONCE in PowerShell (change [37m to desired color):
+  // [30m=black [31m=red [32m=green [33m=yellow [34m=blue [35m=magenta [36m=cyan [37m=white
+// $logo = Get-Content "C:\Users\Sumit Dahiya\.config\fastfetch\logo.txt" -Raw
+// $logo = $logo -replace '\x1b\[[0-9;]*m', ''
+// $esc = [char]27
+// "$esc[31m$logo$esc[0m" | Set-Content "C:\Users\Sumit Dahiya\.config\fastfetch\logo.txt" -NoNewline
+
+  "logo": "C:\\Users\\Sumit Dahiya\\.config\\fastfetch\\logo.txt",
+  "logoColor": "#ffffff",
+  "display": {
+    "separator": " : ",
+    "color": {
+      "keys": "white",
+      "output": "bright_black"
+    }
+  },
+  "modules": [
+    "break",
+    { "type": "custom", "format": "Sumit @ Dahiya", "key": " ", "outputColor": "cyan" },
+    "separator",
+    { "type": "uptime",  "key": " uptime  ", "keyColor": "white" },
+    { "type": "memory",  "key": " memory  ", "keyColor": "white" },
+    { "type": "disk",    "key": " disk    ", "keyColor": "white", "mountPoint": "C:" },
+    { "type": "cpu",     "key": " cpu     ", "keyColor": "white", "format": "i5-12450H" },
+    { "type": "gpu",     "key": " gpu     ", "keyColor": "white", "format": "UHD Graphics" },
+    "separator",
+    "break"
+  ]
+}2
